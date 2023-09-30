@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "note_tags",
+  "info": {
+    "singularName": "note-tag",
+    "pluralName": "note-tags",
+    "displayName": "Note Tag"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "note_templates": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::note-template.note-template",
+      "inversedBy": "note_tags"
+    },
+    "Title": {
+      "type": "string"
+    }
+  }
+}

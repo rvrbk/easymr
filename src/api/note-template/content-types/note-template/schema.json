@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "note_templates",
+  "info": {
+    "singularName": "note-template",
+    "pluralName": "note-templates",
+    "displayName": "Note Template"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "richtext"
+    },
+    "note_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::note-tag.note-tag",
+      "mappedBy": "note_templates"
+    }
+  }
+}
